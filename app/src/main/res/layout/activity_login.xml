@@ -7,19 +7,20 @@
     tools:context=".LoginActivity"
     android:background="@drawable/trace">
 
-    <!--<ImageView
+    <ImageView
         android:id="@+id/login_activity_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size_h"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:src="@drawable/logins"
-        android:layout_marginVertical="200dp"
-        app:layout_constraintBottom_toTopOf="@id/nav_host_login_fragment"
-         />-->
+        android:layout_marginVertical="@dimen/big_mark"
+        app:layout_constraintBottom_toTopOf="@id/nav_login_fragment"
+        />
 
-    <!--<fragment
-        android:id="@+id/nav_host_login_fragment"
+    <fragment
+        android:id="@+id/nav_login_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -28,6 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:navGraph="@navigation/login_nav"
-        app:defaultNavHost="true"/>-->
+        app:defaultNavHost="true"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

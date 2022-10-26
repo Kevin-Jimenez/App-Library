@@ -13,4 +13,16 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_hint">Ingrese correo electronico</string>
+    <string name="hint_password">Ingrese la contraseña</string>
+    <string name="forgot">¿Olvidate tu contraseña?</string>
+    <string name="login_text_button">INGRESAR</string>
+    <string name="no_account_label">¿No tienes cuenta?</string>
+    <string name="register_account">Registrate</string>
+    <string name="singUp_fullname">Nombre Completo</string>
+    <string name="singUp_documento">Numero de documento</string>
+    <string name="singUp_correo">Correo electronico</string>
+    <string name="singUp_contraseña">Contraseña</string>
+    <string name="singUp_text_button">REGISTRAR</string>
+    <string name="forgotPassword_button">RECUPERAR CONTRASEÑA</string>
 </resources>

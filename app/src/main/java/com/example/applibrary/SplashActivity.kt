@@ -4,6 +4,7 @@ import android.animation.Animator
 //import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 //import android.util.Log
 import android.view.animation.Animation.AnimationListener
 import androidx.appcompat.app.AppCompatActivity
@@ -22,8 +23,6 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        binding.splashAnimation.speed = 1.2f
-        binding.splashAnimation.repeatCount = 2
         binding.splashAnimation.playAnimation()
 
         binding.splashAnimation.addAnimatorListener(object: Animator.AnimatorListener{
@@ -35,7 +34,7 @@ class SplashActivity : AppCompatActivity() {
                 val intent = Intent(applicationContext, LoginActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(intent)
-                finish()
+                finish();
             }
 
             override fun onAnimationCancel(animation: Animator) {

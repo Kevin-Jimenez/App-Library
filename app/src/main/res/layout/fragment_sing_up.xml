@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SingUpFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/signUo_fragmen_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        app:cardElevation="@dimen/card_elevation">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/default_margin">
+
+            <!-- docuemnto -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/documento_fragment_layout"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="@string/singUp_documento"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/singUp_documento"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- fin documento -->
+
+            <!-- fullname -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fullname_fragment_layout"
+                app:layout_constraintTop_toBottomOf="@id/documento_fragment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="@string/singUp_fullname"
+                android:layout_marginTop="@dimen/small_margin"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/singUp_fullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- fin fullname -->
+
+            <!-- email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/singup_email_layout"
+                app:layout_constraintTop_toBottomOf="@id/fullname_fragment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="@string/singUp_correo"
+                android:layout_marginTop="@dimen/small_margin"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_email_singUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textEmailAddress"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- fin email -->
+
+            <!-- password -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/singUp_password_layout"
+                app:layout_constraintTop_toBottomOf="@id/singup_email_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:hint="@string/singUp_contraseña"
+                android:layout_marginTop="@dimen/small_margin"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_singup_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- fin password -->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/singUp_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/singUp_password_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="@string/singUp_text_button"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_fragment_singup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/signUo_fragmen_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_marginTop="48dp"
+        android:text="@string/login_text_button"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
