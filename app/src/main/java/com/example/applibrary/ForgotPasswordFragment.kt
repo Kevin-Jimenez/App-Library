@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.example.applibrary.databinding.FragmentForgotPasswordBinding
+import kotlinx.android.synthetic.main.fragment_forgot_password.*
 
 
 /**
@@ -31,6 +32,14 @@ class ForgotPasswordFragment : Fragment() {
         super.onStart()
         binding.loginButtonForgot.setOnClickListener {
             view?.findNavController()?.navigate(R.id.action_forgotPasswordFragment_to_loginFragment)
+        }
+        /*Validar Correo*/
+        binding.forgotButton.setOnClickListener {
+            if(!binding.inputForgot.text.toString().isValidEmail()){
+                binding.emailForgotPassword.error = getString(R.string.email_error)
+            }else{
+                binding.emailForgotPassword.error = null
+            }
         }
     }
 

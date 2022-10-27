@@ -2,14 +2,41 @@
     <!-- Base application theme. -->
     <style name="Theme.AppLibrary" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/teal_200</item>
+        <item name="colorPrimary">@color/primary_Blue</item>
+        <item name="colorPrimaryDark">@color/primary_Blue</item>
+        <item name="colorAccent">@color/primary_gold</item>
+        <item name="colorOnError">@color/error</item>
+        <item name="colorError">@color/error</item>
         <!-- Customize your theme here. -->
+        <item name="shapeAppearanceSmallComponent">@style/shapeAparince.Mintic.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/shapeAparince.Mintic.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/shapeAparince.Mintic.Large</item>
+        <item name="textAppearanceButton">@style/textApparence</item>
     </style>
 
-    <style name="ThemeOverlay.AppLibrary.FullscreenContainer" parent="">
-        <item name="fullscreenBackgroundColor">@color/light_blue_900</item>
-        <item name="fullscreenTextColor">@color/light_blue_A400</item>
+    <style name="shapeAparince.Mintic.Small" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerSize">@dimen/corner_size</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="shapeAparince.Mintic.Medium" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSize">@dimen/corner_size</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="shapeAparince.Mintic.Large" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerSize">@dimen/corner_size</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="textApparence" parent="Widget.MaterialComponents.Button">
+        <item name="fontFamily">@font/roboto_slab_bold</item>
+        <item name="android:textSize">@dimen/text_button_size</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="textApparenceInputs" parent="Widget.MaterialComponents.Button">
+        <item name="fontFamily">@font/roboto_mono_thin</item>
+        <item name="android:textSize">@dimen/text_button_size</item>
     </style>
 </resources>

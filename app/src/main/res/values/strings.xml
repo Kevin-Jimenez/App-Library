@@ -25,4 +25,8 @@
     <string name="singUp_contraseña">Contraseña</string>
     <string name="singUp_text_button">REGISTRAR</string>
     <string name="forgotPassword_button">RECUPERAR CONTRASEÑA</string>
+    <string name="email_error">Email no valido</string>
+    <string name="contrasena_error">Contraseña debe ser mayor a 8 caracteres</string>
+    <string name="name_error">Nombre es obligatorio</string>
+    <string name="documento_error">Documento errado</string>
 </resources>

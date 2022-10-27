@@ -6,6 +6,9 @@ android:layout_height="match_parent"
 xmlns:app="http://schemas.android.com/apk/res-auto"
 tools:context=".LoginFragment">
 
+
+
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/login_fragment_card"
         android:layout_width="0dp"
@@ -14,7 +17,8 @@ tools:context=".LoginFragment">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginHorizontal="@dimen/default_margin"
-        app:cardElevation="@dimen/card_elevation">
+        app:cardElevation="@dimen/card_elevation"
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -34,6 +38,9 @@ tools:context=".LoginFragment">
                android:layout_width="match_parent"
                android:layout_height="match_parent"
                android:inputType="textEmailAddress"
+               android:background="@color/primary_input"
+               android:textColor="@color/primary_blank"
+
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -45,30 +52,32 @@ tools:context=".LoginFragment">
              android:layout_height="wrap_content"
              style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
              android:hint="@string/hint_password"
-             android:layout_marginTop="@dimen/small_margin">
+             android:layout_marginTop="@dimen/small_margin"
+            app:endIconMode="password_toggle"
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/login_input_password"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPassword"
+                android:background="@color/primary_input"
+                android:textColor="@color/primary_blank"
                 />
 
          </com.google.android.material.textfield.TextInputLayout>
-
-
 
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/login_button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:layout_constraintTop_toBottomOf="@id/login_fragment_password_layout"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="@dimen/default_margin"
+                android:fontFamily="@font/roboto_slab_bold"
                 android:text="@string/login_text_button"
-                />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/login_fragment_password_layout" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/fragment_forgot_password"
@@ -79,6 +88,7 @@ tools:context=".LoginFragment">
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/forgot"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:textColor="@color/secondary_Gray"
                 />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -95,7 +105,7 @@ tools:context=".LoginFragment">
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/espacio_card"
-        android:textColor="@color/white"
+        android:textColor="@color/primary_white"
         />
 
     <com.google.android.material.button.MaterialButton
@@ -108,6 +118,7 @@ tools:context=".LoginFragment">
         android:layout_marginHorizontal="@dimen/default_margin"
         android:layout_marginTop="@dimen/small_margin"
         android:text="@string/register_account"
+
         />
 
 

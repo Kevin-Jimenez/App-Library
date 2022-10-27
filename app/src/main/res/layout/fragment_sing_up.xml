@@ -36,6 +36,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="number"
+                    android:background="@color/primary_input"
+                    android:textColor="@color/primary_blank"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -57,6 +59,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="text"
+                    android:background="@color/primary_input"
+                    android:textColor="@color/primary_blank"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -78,6 +82,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="textEmailAddress"
+                    android:background="@color/primary_input"
+                    android:textColor="@color/primary_blank"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -92,6 +98,7 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="@string/singUp_contraseña"
                 android:layout_marginTop="@dimen/small_margin"
+                app:endIconMode="password_toggle"
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -99,6 +106,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:inputType="textPassword"
+                    android:background="@color/primary_input"
+                    android:textColor="@color/primary_blank"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -128,7 +137,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="@dimen/default_margin"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="50dp"
         android:text="@string/login_text_button"
         />
 

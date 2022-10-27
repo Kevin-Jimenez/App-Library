@@ -38,6 +38,24 @@ class LoginFragment : Fragment() {
         binding.registroButton.setOnClickListener {
             view?.findNavController()?.navigate(R.id.action_loginFragment_to_singUpFragment)
         }
+
+        binding.loginButton.setOnClickListener {
+            /*Validacion Login Email*/
+            if(!binding.loginInputEmail.text.toString().isValidEmail()){
+                binding.loginFragmentEmailLayout.error = getString(R.string.email_error)
+            }else{
+                binding.loginFragmentEmailLayout.error = null
+            }
+            /* FIn Validacion Login Email*/
+
+            /*Validacion Login password */
+            if(!binding.loginInputPassword.text.toString().isValidPassword()){
+                binding.loginFragmentPasswordLayout.error = getString(R.string.contrasena_error)
+            }else{
+                binding.loginFragmentPasswordLayout.error = null
+            }
+            /* FIN Validacion Login password */
+        }
     }
 
 }

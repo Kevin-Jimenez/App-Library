@@ -7,4 +7,6 @@
     <dimen name="card_elevation">8dp</dimen>
     <dimen name="small_margin">8dp</dimen>
     <dimen name="espacio_card">40dp</dimen>
+    <dimen name="corner_size">15dp</dimen>
+    <dimen name="text_button_size">12dp</dimen>
 </resources>
