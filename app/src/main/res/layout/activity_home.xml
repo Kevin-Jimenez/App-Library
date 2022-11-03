@@ -26,8 +26,9 @@
                 android:id="@+id/toolbar_image_home"
                 android:layout_width="@dimen/toolbar_image_width"
                 android:layout_height="@dimen/toolbar_image_heigth"
-                android:src="@drawable/logins"
-                android:scaleType="centerCrop"
+                android:src="@drawable/navbartool"
+                android:layout_marginStart="@dimen/big_mark"
+                android:scaleType="fitXY"
                 app:tint="@color/primary_white"/>
 
         </com.google.android.material.appbar.MaterialToolbar>
