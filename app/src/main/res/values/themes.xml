@@ -8,12 +8,13 @@
         <item name="colorOnError">@color/error</item>
         <item name="colorError">@color/error</item>
 
+
         <!-- Customize your theme here. -->
         <item name="shapeAppearanceSmallComponent">@style/shapeAparince.Mintic.Small</item>
         <item name="shapeAppearanceMediumComponent">@style/shapeAparince.Mintic.Medium</item>
         <item name="shapeAppearanceLargeComponent">@style/shapeAparince.Mintic.Large</item>
         <item name="textAppearanceButton">@style/textApparence</item>
-    
+        <item name="colorControlNormal">@color/primary_white</item>
     </style>
 
     <style name="Theme.AppLibrary.NoActionBar">
@@ -51,8 +52,14 @@
         <item name="textAllCaps">true</item>
     </style>
 
-    <style name="textApparenceInputs" parent="Widget.MaterialComponents.Button">
+    <style name="textApparenceInputs" parent="TextAppearance.MaterialComponents.Body1">
         <item name="fontFamily">@font/roboto_mono_thin</item>
         <item name="android:textSize">@dimen/text_button_size</item>
+    </style>
+
+    <style name="textApparenceInputs.HeadLineS" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/roboto_slab_bold</item>
+        <item name="android:textColor">@color/primary_Blue</item>
+        <item name="fontWeight">700</item>
     </style>
 </resources>

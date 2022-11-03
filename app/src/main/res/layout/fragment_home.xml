@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/home_fragment_banner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/panelhome"
+        android:scaleType="fitXY"
+        android:layout_width="0dp"
+        android:layout_height="148dp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/home_fragment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/home_fragment_banner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="@string/home_label_title"
+        android:textAppearance="@style/textApparenceInputs.HeadLineS"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/home_fragment_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/home_fragment_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="@dimen/border_text_subtitles"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/home_subtitle"
+        android:gravity="center"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

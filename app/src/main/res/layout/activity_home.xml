@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+    
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/activity_home_appbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/home_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary_Blue"
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/toolbar_image_home"
+                android:layout_width="@dimen/toolbar_image_width"
+                android:layout_height="@dimen/toolbar_image_heigth"
+                android:src="@drawable/logins"
+                android:scaleType="centerCrop"
+                app:tint="@color/primary_white"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <fragment
+        android:id="@+id/nav_home_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_home_appbar"
+        app:layout_constraintBottom_toTopOf="@id/activity_home_menu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:navGraph="@navigation/home_navigation"
+        app:defaultNavHost="true"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/activity_home_menu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        app:menu="@menu/home_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:labelVisibilityMode="labeled"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

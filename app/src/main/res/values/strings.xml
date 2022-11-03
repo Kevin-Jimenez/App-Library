@@ -29,4 +29,10 @@
     <string name="contrasena_error">Contraseña debe ser mayor a 8 caracteres</string>
     <string name="name_error">Nombre es obligatorio</string>
     <string name="documento_error">Documento errado</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_locations">Sedes</string>
+    <string name="menu_search">Buscar</string>
+    <string name="menu_writers">Escritores</string>
+    <string name="home_label_title">Cada libro encierra un tesoro</string>
+    <string name="home_subtitle">Si quieres aventura, lánzate a la lectura</string>
 </resources>

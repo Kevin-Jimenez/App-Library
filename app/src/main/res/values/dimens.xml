@@ -9,4 +9,7 @@
     <dimen name="espacio_card">40dp</dimen>
     <dimen name="corner_size">15dp</dimen>
     <dimen name="text_button_size">12dp</dimen>
+    <dimen name="toolbar_image_width">150dp</dimen>
+    <dimen name="toolbar_image_heigth">56dp</dimen>
+    <dimen name="border_text_subtitles">90dp</dimen>
 </resources>
