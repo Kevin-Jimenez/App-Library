@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.example.applibrary.databinding.FragmentForgotPasswordBinding
-import kotlinx.android.synthetic.main.fragment_forgot_password.*
+//import kotlinx.android.synthetic.main.fragment_forgot_password.*
 
 
 /**

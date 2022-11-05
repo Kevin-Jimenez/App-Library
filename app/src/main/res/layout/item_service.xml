@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/service_icon"
+        app:layout_constraintTop_toTopOf="@id/service_descripcion"
+        app:layout_constraintBottom_toBottomOf="@id/service_descripcion_resumen"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginVertical="@dimen/default_margin"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_width="@dimen/service_icon_size"
+        android:layout_height="@dimen/service_icon_size"
+        tools:srcCompat="@drawable/ic_baseline_book_24"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/service_descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/service_icon"
+        android:layout_marginStart="@dimen/default_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/small_margin_top"
+        tools:text="Aventura"
+        android:textAppearance="@style/gendersDescriptions"
+        android:textColor="@color/primary_gold"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/service_descripcion_resumen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/service_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        app:layout_constraintTop_toTopOf="@id/service_descripcion"
+        android:layout_marginTop="@dimen/small_margin_top"
+        tools:text="Es un género narrativo literario que narra los viajes, el misterio y el riesgo"
+        android:textAppearance="@style/gendersDescriptions.resum"
+        />
+    
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/service_home_divider"
+        app:layout_constraintTop_toBottomOf="@id/service_descripcion_resumen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

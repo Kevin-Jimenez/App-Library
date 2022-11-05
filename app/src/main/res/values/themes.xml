@@ -62,4 +62,17 @@
         <item name="android:textColor">@color/primary_Blue</item>
         <item name="fontWeight">700</item>
     </style>
+
+    <style name="gendersDescriptions" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/roboto_slab_bold</item>
+        <item name="android:textColor">@color/secondary_Gray</item>
+        <item name="android:textSize">@dimen/genderDescriptionText</item>
+    </style>
+
+    <style name="gendersDescriptions.resum" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/roboto_slab_bold</item>
+        <item name="fontWeight">700</item>
+        <item name="android:textColor">@color/secondary_Gray</item>
+        <item name="android:textSize">@dimen/genderDescriptionTextResumen</item>
+    </style>
 </resources>

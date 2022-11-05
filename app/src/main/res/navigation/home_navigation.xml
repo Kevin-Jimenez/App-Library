@@ -7,11 +7,30 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.applibrary.HomeFragment"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_writersFragment"
+            app:destination="@id/writersFragment" />
+    </fragment>
     <fragment
         android:id="@+id/writersFragment"
         android:name="com.example.applibrary.WritersFragment"
-        tools:layout="@layout/fragment_writers" />
+        tools:layout="@layout/fragment_writers" >
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+        <argument
+            android:name="description"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+        <argument
+            android:name="search"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
     <fragment
         android:id="@+id/locationFragment"
         android:name="com.example.applibrary.LocationFragment"
