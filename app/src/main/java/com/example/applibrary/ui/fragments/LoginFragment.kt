@@ -1,4 +1,4 @@
-package com.example.applibrary
+package com.example.applibrary.ui.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,10 +6,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.navigation.*
-import androidx.navigation.fragment.NavHostFragment.findNavController
+import com.example.applibrary.R
+import com.example.applibrary.data.viewmodels.LoginViewModel
 import com.example.applibrary.databinding.FragmentLoginBinding
-
+import com.example.applibrary.isValidEmail
+import com.example.applibrary.isValidPassword
+import com.example.applibrary.ui.activities.HomeActivity
+import com.google.android.material.snackbar.Snackbar
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 /**
@@ -21,6 +27,7 @@ class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
     private val binding: FragmentLoginBinding get() = _binding!!
+    private val loginViewModel: LoginViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -59,11 +66,26 @@ class LoginFragment : Fragment() {
 
             /*Home Navigation*/
             if(binding.loginInputEmail.text.toString().isValidEmail() && binding.loginInputPassword.text.toString().isValidPassword()){
+                binding.loginButton.isEnabled = false
+                loginViewModel.login(binding.loginInputEmail.text.toString(), binding.loginInputPassword.text.toString())
+            }
+        }
+        observeViewModels()
+    }
+
+    private fun observeViewModels(){
+        loginViewModel.login.observe(viewLifecycleOwner, Observer {
+            binding.loginButton.isEnabled = true
+            if(it){
                 val intent = Intent(requireContext(), HomeActivity::class.java)
                 startActivity(intent)
                 requireActivity().finish()
             }
-        }
+        })
+        loginViewModel.error.observe(viewLifecycleOwner, Observer {
+            binding.loginButton.isEnabled = true
+            Snackbar.make(binding.root, it, Snackbar.LENGTH_LONG).show()
+        })
     }
 
 }

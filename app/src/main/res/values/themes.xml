@@ -36,6 +36,11 @@
             <item name="cornerFamily">rounded</item>
     </style>
 
+    <style name="ImageProfile" parent="">
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
     <style name="shapeAparince.Mintic.Medium" parent="ShapeAppearance.MaterialComponents.MediumComponent">
         <item name="cornerSize">@dimen/corner_size</item>
         <item name="cornerFamily">rounded</item>
@@ -74,5 +79,19 @@
         <item name="fontWeight">700</item>
         <item name="android:textColor">@color/secondary_Gray</item>
         <item name="android:textSize">@dimen/genderDescriptionTextResumen</item>
+    </style>
+
+    <style name="descripcionesLibros" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/roboto_slab_bold</item>
+        <item name="fontWeight">700</item>
+        <item name="android:textColor">@color/secondary_Gray</item>
+        <item name="android:textSize">@dimen/descripcionlibro</item>
+    </style>
+
+    <style name="califications" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/roboto_slab_bold</item>
+
+        <item name="android:textColor">@color/secondary_Gray</item>
+        <item name="android:textSize">8sp</item>
     </style>
 </resources>

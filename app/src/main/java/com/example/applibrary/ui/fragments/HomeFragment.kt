@@ -1,16 +1,21 @@
-package com.example.applibrary
+package com.example.applibrary.ui.fragments
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.applibrary.interfaces.OnServiceClickListener
+import com.example.applibrary.R
+import com.example.applibrary.ui.adapters.ServiceAdapter
+import com.example.applibrary.data.models.ServiceItemModel
+import com.example.applibrary.data.viewmodels.HomeViewModule
 import com.example.applibrary.databinding.FragmentHomeBinding
-import com.example.applibrary.databinding.FragmentSingUpBinding
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 /**
@@ -23,6 +28,7 @@ class HomeFragment : Fragment() {
     private var _binding:FragmentHomeBinding? = null
     private val binding:FragmentHomeBinding get() = _binding!!
     private lateinit var serviceAdapter: ServiceAdapter
+    private val homeViewModule: HomeViewModule by sharedViewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,24 +40,9 @@ class HomeFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        serviceAdapter = ServiceAdapter(listOf(
-            ServiceItemModel(
-                "1","Aventura","Es un género narrativo literario que narra los viajes, el misterio y el riesgo",R.drawable.logins.toString()
-            ),
-            ServiceItemModel(
-                "2","Ciencia Ficcion","Es un género narrativo literario que narra la ficcion, la literatura fantastica y el terror",R.drawable.logins.toString()
-            ),
-            ServiceItemModel(
-                "3","Fantasia","Es un género narrativo literario que narra la fantasia",R.drawable.logins.toString()
-            ),
-            ServiceItemModel(
-                "4","Romantico","Es un género narrativo literario que narra lo dulce del amor y la pasion",R.drawable.logins.toString()
-            ),
-            ServiceItemModel(
-                "5","Infantil y Juvenil","Es un género narrativo literario que narra las obras de creación para niños y jóvenes",R.drawable.logins.toString()
-            )
-        ))
-        serviceAdapter.listener = object : OnServiceClickListener{
+        homeViewModule.services()
+        serviceAdapter = ServiceAdapter(listOf())
+        serviceAdapter.listener = object : OnServiceClickListener {
             override fun onClick(item: ServiceItemModel) {
                 val direction = HomeFragmentDirections.actionHomeFragmentToWritersFragment()
                 direction.name = item.title
@@ -64,6 +55,13 @@ class HomeFragment : Fragment() {
             adapter = serviceAdapter
             layoutManager = LinearLayoutManager(requireContext())
         }
+        observeViewModel()
+    }
+
+    private fun observeViewModel(){
+        homeViewModule.services.observe(viewLifecycleOwner, Observer {
+            serviceAdapter.updateDataset(it)
+        })
     }
 
 }

@@ -2,6 +2,9 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'androidx.navigation.safeargs'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
 }
 
 /*apply plugin: 'com.android.application'
@@ -57,4 +60,32 @@ dependencies {
     def nav_version = "2.3.2"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    //for google maps
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+
+    //for koin
+    implementation 'io.insert-koin:koin-android:3.2.0'
+    //for lifecycle
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+
+    //for couritines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
+
+    //for room
+    implementation "androidx.room:room-runtime:2.4.3"
+    implementation 'androidx.room:room-ktx:2.4.3'
+    kapt "androidx.room:room-compiler:2.4.3"
+
+    //for firebase
+    implementation platform('com.google.firebase:firebase-bom:31.1.0')
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+}
+
+secrets {
+    propertiesFileName = 'secrets.properties'
+    defaultPropertiesFileName = 'local.properties'
+    ignoreList.add("sdk.*")
 }

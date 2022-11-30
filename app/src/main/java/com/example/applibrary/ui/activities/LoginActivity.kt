@@ -1,4 +1,4 @@
-package com.example.applibrary
+package com.example.applibrary.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

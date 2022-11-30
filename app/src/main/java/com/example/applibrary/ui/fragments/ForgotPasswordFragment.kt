@@ -1,4 +1,4 @@
-package com.example.applibrary
+package com.example.applibrary.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import com.example.applibrary.R
 import com.example.applibrary.databinding.FragmentForgotPasswordBinding
+import com.example.applibrary.isValidEmail
+
 //import kotlinx.android.synthetic.main.fragment_forgot_password.*
 
 

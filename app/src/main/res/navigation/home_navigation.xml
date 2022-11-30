@@ -6,7 +6,7 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.applibrary.HomeFragment"
+        android:name="com.example.applibrary.ui.fragments.HomeFragment"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_writersFragment"
@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/writersFragment"
-        android:name="com.example.applibrary.WritersFragment"
+        android:name="com.example.applibrary.ui.fragments.WritersFragment"
         tools:layout="@layout/fragment_writers" >
         <argument
             android:name="name"
@@ -30,13 +30,20 @@
             android:name="search"
             app:argType="boolean"
             android:defaultValue="true" />
+        <action
+            android:id="@+id/action_writersFragment_to_writtersDetailsFragment"
+            app:destination="@id/writtersDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/locationFragment"
-        android:name="com.example.applibrary.LocationFragment"
+        android:name="com.example.applibrary.ui.fragments.LocationFragment"
         tools:layout="@layout/fragment_location" />
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.applibrary.SearchFragment"
+        android:name="com.example.applibrary.ui.fragments.SearchFragment"
         tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/writtersDetailsFragment"
+        android:name="com.example.applibrary.ui.fragments.WrittersDetailsFragment"
+        tools:layout="@layout/fragment_writters_details" />
 </navigation>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.fragments.WrittersDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/writters_details_card_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/datails_imagen"
+            android:layout_width="@dimen/icon_size_h"
+            android:layout_height="@dimen/icon_size_h"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            app:shapeAppearanceOverlay="@style/ImageProfile"
+            app:strokeColor="@color/primary_gold"
+            android:scaleType="centerCrop"
+            app:strokeWidth="1dp"
+            tools:src="@drawable/ic_baseline_book_24"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/details_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/datails_imagen"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/primary_blank"
+            android:textAppearance="@style/gendersDescriptions.resum"
+            tools:text="Cien Años de Soledad" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/details_genero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_name"
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/gendersDescriptions"
+            android:textColor="@color/primary_gold"
+            tools:text="Accion" />
+
+        <RatingBar
+            android:id="@id/details_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_genero"
+            android:isIndicator="true"
+            android:numStars="5"
+            tools:rating="4"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_marginTop="8dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/details_title_desciption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_star"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/gendersDescriptions"
+            android:textColor="@color/primary_gold"
+            android:text="Resumen"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/details_desciption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/details_title_desciption"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/gendersDescriptions.resum"
+            android:textColor="@color/secondary_Gray"
+            android:text="Inspirado por un sueño durante su travesía en la selva, José Arcadio Buendía decide quedarse en ese punto del camino y fundar Macondo, pueblo que crece poco a poco"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_button_forgot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/details_desciption"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="@dimen/default_margin"
+            android:layout_marginTop="55dp"
+            android:text="LEER"
+            app:strokeColor="@color/secondary_Gray"
+            app:strokeWidth="1dp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

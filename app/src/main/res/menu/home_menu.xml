@@ -10,7 +10,7 @@
         android:title="@string/menu_locations" />
     <item
         android:id="@+id/searchFragment"
-        android:icon="@drawable/ic_baseline_search_24"
+        android:icon="@drawable/ic_baseline_person_pin_24"
         android:title="@string/menu_search" />
     <item
         android:id="@+id/writersFragment"

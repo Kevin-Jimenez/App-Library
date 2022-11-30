@@ -15,5 +15,6 @@
     <dimen name="service_icon_size">56dp</dimen>
     <dimen name="genderDescriptionText">16sp</dimen>
     <dimen name="genderDescriptionTextResumen">12sp</dimen>
+    <dimen name="descripcionlibro">8sp</dimen>
     <dimen name="small_margin_top">22dp</dimen>
 </resources>

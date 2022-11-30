@@ -31,9 +31,11 @@
     <string name="documento_error">Documento errado</string>
     <string name="menu_home">Inicio</string>
     <string name="menu_locations">Sedes</string>
-    <string name="menu_search">Buscar</string>
+    <string name="menu_search">Perfil</string>
     <string name="menu_writers">Escritores</string>
     <string name="home_label_title">Cada libro encierra un tesoro</string>
     <string name="home_subtitle">Si quieres aventura, lánzate a la lectura</string>
     <string name="home_generos_label">Nuestros Generos Literarios</string>
+    <string name="writers_label">Nuestros Generos Literarios</string>
+    <string name="writers_subtitle">Descubre maravillosas historias detras de cada genero</string>
 </resources>

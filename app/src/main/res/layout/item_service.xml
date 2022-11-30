@@ -15,6 +15,9 @@
         android:layout_width="@dimen/service_icon_size"
         android:layout_height="@dimen/service_icon_size"
         tools:srcCompat="@drawable/ic_baseline_book_24"
+        app:shapeAppearanceOverlay="@style/ImageProfile"
+        app:strokeColor="@color/primary_gold"
+        app:strokeWidth="1dp"
         />
 
     <com.google.android.material.textview.MaterialTextView
